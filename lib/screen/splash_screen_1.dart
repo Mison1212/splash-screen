@@ -87,25 +87,14 @@ class SplashScreen1 extends StatelessWidget {
 
             const SizedBox(height: 40),
 
-            // TODO: Membuat Button Continue
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Continue ditekan!')),
-                );
-              },
-              child: const Text(
-                'Continue',
-                style: TextStyle(color: Colors.white, fontSize: 18),
-              ),
-            ),
+           ElevatedButton(
+            onPressed: () {
+              // Todo call next pages
+           }, 
+           style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green
+           ),
+           child: Text("Continue", style: TextStyle(fontSize: 14,)))
           ],
         ),
       ),
