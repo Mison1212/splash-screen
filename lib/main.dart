@@ -4,38 +4,36 @@ void main() {
   runApp(const MyApp());
 }
 
-// menggunakan shortcut: stless + Tab
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aplikasi NIM 225410123', // ganti dengan NIM kamu
+      title: "NIM: 1234567, Ketut",
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        brightness: Brightness.light,
+        useMaterial3: true, 
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue, 
+        ),
       ),
-      home: const HomePage(),
+      home: const SplashScreen1(), 
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-// contoh halaman utama sederhana
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SplashScreen1 extends StatelessWidget {
+  const SplashScreen1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Halaman Utama'),
-      ),
+      backgroundColor: Colors.blue.shade50,
       body: const Center(
         child: Text(
-          'Selamat Datang di Aplikasi Flutter!',
-          style: TextStyle(fontSize: 18),
+          'Splash Screen 1',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
     );
