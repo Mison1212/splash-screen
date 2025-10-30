@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/screen/splash_screen_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,25 +18,8 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.blue, 
         ),
       ),
-      home: const SplashScreen1(), 
+      home: const SplashScreen1(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class SplashScreen1 extends StatelessWidget {
-  const SplashScreen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue.shade50,
-      body: const Center(
-        child: Text(
-          'Splash Screen 1',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-      ),
     );
   }
 }
